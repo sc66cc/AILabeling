@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer 
@@ -87,7 +88,8 @@ const Monitoring: React.FC = () => {
          <div className="p-4 font-mono text-xs text-slate-400 space-y-2 h-48 overflow-y-auto">
             <p><span className="text-slate-500">[2023-10-27 10:45:01]</span> <span className="text-blue-400">INFO</span> [Scheduler] Job #J-2941 assigned to Node-04</p>
             <p><span className="text-slate-500">[2023-10-27 10:45:05]</span> <span className="text-blue-400">INFO</span> [API] POST /v1/predict/lithology 200 OK - 12ms</p>
-            <p><span className="text-slate-500">[2023-10-27 10:45:12]</span> <span className="text-yellow-400">WARN</span> [Resource] GPU utilization > 90% on Node-01</p>
+            {/* 修复了此处的 > 符号，改为 &gt; */}
+            <p><span className="text-slate-500">[2023-10-27 10:45:12]</span> <span className="text-yellow-400">WARN</span> [Resource] GPU utilization &gt; 90% on Node-01</p>
             <p><span className="text-slate-500">[2023-10-27 10:45:18]</span> <span className="text-blue-400">INFO</span> [API] POST /v1/predict/lithology 200 OK - 15ms</p>
             <p><span className="text-slate-500">[2023-10-27 10:45:22]</span> <span className="text-blue-400">INFO</span> [Auth] User 'Admin' logged in successfully</p>
          </div>
